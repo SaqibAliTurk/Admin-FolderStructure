@@ -1,3 +1,4 @@
+import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginSystemModule } from './login-system/login-system.module';
 import { LoginComponent } from './login-system/login/login.component';
 import { NgModule } from '@angular/core';
@@ -15,6 +16,7 @@ import {FormsModule,ReactiveFormsModule} from'@angular/forms'
     BrowserModule,
     AppRoutingModule,
     LoginSystemModule,
+    DashboardModule,
     FormsModule,
     ReactiveFormsModule
 

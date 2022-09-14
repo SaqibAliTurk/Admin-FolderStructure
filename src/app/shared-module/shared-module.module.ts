@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +16,13 @@ import { PrintErrorComponent } from './print-error/print-error.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
+  exports:[FooterComponent,
+    HeaderComponent,
+    NavbarComponent,
+    PrintErrorComponent]
 })
+  
+
 export class SharedModuleModule { }

@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  open: boolean = false;
+  image: any;
   constructor() { }
 
   ngOnInit(): void {
+  }
+  
+  toggleMenu(): void {
+    console.log(this.open);
+    this.open = !this.open;
   }
 
 }

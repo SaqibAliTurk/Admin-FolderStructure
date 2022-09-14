@@ -1,1 +1,43 @@
-<p>header works!</p>
+<nav class="navbar" [ngClass]="{ active: showMenu }">
+    <a class="logo" (routerLink)="('/dashboard')">
+      <img src="/assets/layout/images/logo.png" alt="logo" />
+    </a>
+  
+    <fa-icon
+      [icon]="faBars"
+      class="menu"
+      (click)="onMenuClick()"
+      style="font-size: 0.8rem"
+    ></fa-icon>
+  
+    <div class="rightContainer" [ngClass]="{ active: showMenu }">
+      <ul class="links">
+        <li><a href="" class="link first">Students</a></li>
+        <li><a routerLink = "/dashboard/my-application" class="link">Courses</a></li>
+  
+        <div class="dropdown">
+          About & Help
+          <fa-icon [icon]="faCaretDown" style="margin-left: 0.5rem"></fa-icon>
+          <div class="dropdown-content">
+            <a href="" class="dropdown-link">About</a>
+            <a href="" class="dropdown-link">Help</a>
+          </div>
+        </div>
+      </ul>
+  
+      <div class="search-container">
+        <div class="search" [ngClass]="{ showSearchContainer: showSearchInput }">
+          <input
+            type="text"
+            placeholder="Search"
+            class="searchField"
+            [ngClass]="{ showSearch: showSearchInput }"
+          />
+          <fa-icon [icon]="faSearch" (click)="onSearchClick()"></fa-icon>
+        </div>
+      </div>
+  
+      
+    </div>
+  </nav>
+  
