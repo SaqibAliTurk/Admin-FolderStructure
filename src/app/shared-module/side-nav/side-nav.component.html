@@ -1,0 +1,57 @@
+<h1>side-nav works!</h1>
+
+<div class="main">
+  <!-- office-options -->
+  <section class="option-container">
+    <div class="option" (click)="onOfficeOptionClick()">
+      <span>
+        <!-- add an icon here -->
+        <p>Offices</p>
+      </span>
+    </div>
+    <div class="sub-options" [ngClass]="{ show: officeToggle }">
+      <div class="sub-option">
+        <a
+          class="link"
+          [routerLink]="['/dashboard/add-office']"
+          routerLinkActive="active"
+        >
+          <!-- add icon here -->
+          Add New Office
+        </a>
+      </div>
+      <div class="sub-option">
+        <a
+          class="link"
+          [routerLink]="['/dashboard/manage-office']"
+          routerLinkActive="active"
+        >
+          <!-- add icon here -->
+          Manage Offices
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- employee-options -->
+  <section class="option-container">
+    <div class="option" (click)="onEmployeeOptionClick()">
+      <span>
+        <!-- add an icon here -->
+        <p>Employees</p>
+      </span>
+    </div>
+    <div class="sub-options" [ngClass]="{ show: employeeToggle }">
+      <div class="sub-option">
+        <a class="link" routerLinkActive="active">
+          <!-- add icon here -->
+          Add New Employee
+        </a>
+      </div>
+      <div class="sub-option">
+        <!-- add an icon here -->
+        <a class="link" routerLinkActive="active">Manage Employees</a>
+      </div>
+    </div>
+  </section>
+</div>

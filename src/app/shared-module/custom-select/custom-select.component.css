@@ -1,0 +1,56 @@
+/* select container styling */
+.select-container {
+  position: relative;
+  /* margin: 0.6rem 0; */
+}
+
+/* drop down icon styling */
+.drop-icon {
+  position: absolute;
+  right: 0.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.select-container:hover > .drop-icon {
+  color: #31497e;
+}
+
+/* select element styling */
+.select-container > select {
+  appearance: none;
+  position: relative;
+  border: hidden;
+  background: transparent;
+  border-bottom: 2px solid #4468b4;
+  outline: none;
+  color: #808080;
+
+  width: 100%;
+  min-width: 30%;
+  transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.select-container > select.disabled {
+  cursor: not-allowed;
+  border-bottom: 2px solid #eee;
+}
+
+.select-container > select:focus {
+  color: #000;
+}
+
+.select-container > select.ng-invalid.ng-touched {
+  border-bottom: 2px solid #ff0000;
+}
+
+.select-container > select.ng-valid.ng-touched {
+  border-bottom: 2px solid #44b462;
+}
+
+label {
+  /* margin-bottom: 0.3rem; */
+  margin-bottom: 0.9rem;
+}

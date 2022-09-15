@@ -1,0 +1,30 @@
+.employee-card {
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+  position: relative;
+}
+
+.employee-card > p {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+.divider {
+  width: 0.2rem;
+  height: 3rem;
+  display: flex;
+  border-radius: 2rem;
+  background: #4468b4;
+  /* border: 2px solid red; */
+}
+
+.select-dropdown-container {
+  width: 30%;
+}

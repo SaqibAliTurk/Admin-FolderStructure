@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  /* border: 2px solid lime; */
+  padding-left: 3rem;
+}
+
+.option-container {
+  /* border: 2px solid yellow; */
+  /* position: relative; */
+}
+
+.option {
+  /* border: 2px solid pink; */
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.sub-options {
+  /* border: 2px solid purple; */
+  cursor: pointer;
+  display: none;
+}
+
+.sub-option {
+  /* border: 2px solid violet; */
+  margin: 0.2rem 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.sub-option > .link {
+  padding: 0.9rem 1.2rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  text-decoration: none;
+  color: #484848;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.sub-option > .link:hover {
+  background: #2c54ac;
+  color: #fff;
+}
+
+.show {
+  display: block;
+}
+
+.sub-option > .active {
+  color: #fff;
+  background: #4869ae;
+}

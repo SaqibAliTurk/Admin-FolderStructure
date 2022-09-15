@@ -1,0 +1,25 @@
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+}
+
+.side-nav {
+  flex: 1;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid red;
+}
+
+.main-content {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid blue;
+}
+
+.content {
+  margin: 3rem 0;
+}

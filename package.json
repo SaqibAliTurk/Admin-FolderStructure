@@ -38,6 +38,7 @@
     "ng-circle-progress": "^1.6.0",
     "ngx-circle-progress": "^6.0.2",
     "ngx-pagination": "^6.0.2",
+    "ngx-select-dropdown": "^1.5.0",
     "primeflex": "^3.2.1",
     "primeicons": "^5.0.0",
     "primeng": "^12.2.2",

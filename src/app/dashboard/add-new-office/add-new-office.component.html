@@ -1,0 +1,129 @@
+<form class="form-container" [formGroup]="officeForm">
+  <!-- basic information section -->
+  <section>
+    <!-- header -->
+    <div class="header">
+      <h1 class="title">Basic Information</h1>
+    </div>
+
+    <!-- office name and id -->
+    <div class="fields-container">
+      <div class="field-container">
+        <label>Office Name*</label>
+        <input
+          type="text"
+          placeholder="Enter Office Name"
+          formControlName="name"
+        />
+      </div>
+      <div class="field-container">
+        <label>Office ID*</label>
+        <input type="text" placeholder="Enter Office ID" formControlName="id" />
+      </div>
+    </div>
+
+    <!-- office email and phone no -->
+    <div class="fields-container">
+      <div class="field-container">
+        <label>Office Email*</label>
+        <input
+          type="email"
+          placeholder="Enter Office Email"
+          formControlName="email"
+        />
+      </div>
+      <div class="field-container">
+        <label>Office Phone No*</label>
+        <input
+          type="text"
+          placeholder="Enter Office Phone No"
+          formControlName="phone"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- address information section -->
+  <section>
+    <!-- header -->
+    <div class="header">
+      <h1 class="title">Address Information</h1>
+    </div>
+
+    <!-- address and country -->
+    <div class="fields-container">
+      <div class="field-container">
+        <label>Address*</label>
+        <input
+          type="text"
+          placeholder="Enter Address"
+          formControlName="address"
+        />
+      </div>
+      <div class="field-container">
+        <app-custom-select
+          [control]="country"
+          [name]="countryDropdown.name"
+          [defaultValue]="countryDropdown.default"
+          [values]="countryDropdown.options"
+          [label]="countryDropdown.label"
+        ></app-custom-select>
+      </div>
+    </div>
+
+    <!-- city, state and zip code -->
+    <div class="fields-container">
+      <div class="field-container quarter-field">
+        <label>City*</label>
+        <input type="text" placeholder="Enter City" formControlName="city" />
+      </div>
+      <div class="field-container quarter-field">
+        <label>State*</label>
+        <input type="text" placeholder="Enter State" formControlName="state" />
+      </div>
+      <div class="field-container quarter-field">
+        <label>Zip Code*</label>
+        <input type="text" placeholder="Enter Zip Code" formControlName="zip" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Add Employees section -->
+  <section>
+    <!-- header -->
+    <div class="header">
+      <h1 class="title">Employees</h1>
+    </div>
+
+    <!-- content -->
+    <div class="content">
+      <!-- add icon top right -->
+      <fa-icon
+        [icon]="faPlus"
+        class="add-icon"
+        (click)="onClickAddEmployee()"
+      ></fa-icon>
+
+      <!-- column names -->
+      <div class="column-names">
+        <div class="sr">Sr.No</div>
+        <div class="name">Employees</div>
+        <div class="role">Role</div>
+      </div>
+
+      <!-- add employee card component -->
+      <!-- <app-add-employee></app-add-employee>
+      <app-add-employee></app-add-employee>
+      <app-add-employee></app-add-employee>
+      <app-add-employee></app-add-employee> -->
+      <app-add-employee
+        *ngFor="let employee of employees; index as i"
+        [id]="employee.id"
+        [serial]="i + 1"
+      ></app-add-employee>
+    </div>
+  </section>
+
+  <!-- submit button -->
+  <button class="submit-btn">Submit</button>
+</form>

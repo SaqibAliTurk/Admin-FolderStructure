@@ -1,0 +1,233 @@
+/* styling for the form-container */
+
+.form-container {
+  background: white;
+  margin: 0 auto;
+  font-size: 0.6em;
+  padding: 3rem 4rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "poppins", sans-serif;
+  color: #4468b4;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  /* position: relative; */
+  /* z-index: 1; */
+}
+
+/* header  */
+.header > h1 {
+  font-size: 1.5em;
+  margin-top: 2rem;
+}
+
+/* multiple fields container */
+.fields-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* field container styling */
+.field-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  /* gap: 2rem; */
+  margin: 0.6rem 0;
+}
+
+/* labels inside the field container */
+.field-container > label {
+  margin-bottom: 0.9rem;
+}
+
+/* radio container styling */
+.radio-container {
+  width: 100%;
+  margin: 0.6rem 0;
+}
+.radio-container > label {
+  margin-bottom: 0.9rem;
+}
+
+/* options styling */
+.options {
+  display: flex;
+  padding: 0.5rem 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* option styling */
+.option {
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #4468b4;
+}
+
+/* text/calendar input and select element styling */
+.field-container > input:not([type="radio"]):not([type="file"]) {
+  border: hidden;
+  border-bottom: 2px solid #4468b4;
+  outline: none;
+  color: #4468b4;
+  max-width: 100%;
+  width: 100%;
+  min-width: 30%;
+}
+
+/* radio button styling */
+.radio-container > .options > .option > input[type="radio"] {
+  appearance: none;
+  border: 0.15em solid #4468b4;
+  margin-right: 0.2rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.radio-container > .options > .option > input[type="radio"]:hover,
+input[type="radio"]:checked {
+  background: #4468b4;
+}
+
+/* Stack fields styling */
+.stack-fields {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* conditional class for invalid inputs */
+.field-container
+  > input:not([type="radio"]):not([type="file"]).ng-invalid.ng-touched,
+.password-field > input[type="password"] {
+  border-bottom: 2px solid #ff0000;
+}
+
+.field-container > input:not([type="radio"]):not([type="file"]).ng-valid {
+  border-bottom: 2px solid #44b462;
+}
+
+/* styling for the next and previous btns */
+.navigation-btns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.nav-btn-container {
+  color: #fff;
+  background: #4468b4;
+  border-radius: 100%;
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #4468b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-btn-container:hover {
+  background: #fff;
+  color: #4468b4;
+}
+
+/* buttons styling */
+
+.filled {
+  color: #fff;
+  background: #4468b4;
+  padding: 0.4rem 1.5rem;
+  border: 2px solid #4468b4;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.filled:hover {
+  background: #fff;
+  color: #4468b4;
+}
+
+.outlined {
+  background: #fff;
+  color: #4468b4;
+}
+
+.outlined:hover {
+  background: #4468b4;
+  color: #fff;
+}
+
+/* save btn styling */
+
+.controls {
+  width: 100%;
+  margin: 3rem 0;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls > button {
+  border: 3px solid #4468b4;
+  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem !important;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* 738 pixels and above styling */
+@media (min-width: 768px) {
+  .form-container {
+    padding: 1rem 5rem;
+  }
+
+  .form {
+    padding: 3rem 4rem 1.5rem 4rem;
+  }
+
+  .field-container {
+    width: 40%;
+  }
+
+  .stack-fields {
+    width: 40%;
+    /* border: 1px solid red; */
+  }
+
+  .stack-fields > .field-container {
+    width: 100%;
+  }
+
+  .quarter-field {
+    width: 30%;
+  }
+
+  .radio-container {
+    width: 40%;
+  }
+
+  .nav-btn-container {
+    width: 80px;
+    font-size: 4em;
+    height: 80px;
+  }
+}
