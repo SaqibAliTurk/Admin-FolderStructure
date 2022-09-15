@@ -1,14 +1,17 @@
+import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
+import { UserComponent } from './user/user.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: HomeComponent },
+      { path: '', redirectTo: 'user', pathMatch: 'full' },
+      { path: 'user', component: UserComponent },
+      { path: 'manageEmployees', component: ManageEmployeesComponent },
     ],
   },
 ];

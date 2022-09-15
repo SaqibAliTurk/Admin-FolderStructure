@@ -1,3 +1,132 @@
-<app-navbar></app-navbar>
+<!-- ================== Top Navigation Bar ==============> -->
+<header>
+  <img
+    class="logo"
+    style="height: fit-content; width: fit-content"
+    src="../../../assets/layout/images/logo.png"
+  />
+  <div class="nav-content">
+    <!-- notification bell -->
+    <div class="notif-container">
+      <i class="bi bi-bell icon"></i>
+    </div>
+
+    <!-- profile-img -->
+    <div
+      class="profile-img-container"
+      (click)="toggleMenu()"
+      [ngClass]="{ hide: !open }"
+    >
+      <div class="profile-img">
+        <img [src]="image" alt="" />
+        <i class="bi bi-caret-down icon" width="25" height="25"></i>
+      </div>
+      <ul class="profile-options">
+        <li class="profile-option">
+          <a>Profile</a>
+        </li>
+        <li class="profile-option">
+          <a>Account Settings</a>
+        </li>
+        <li class="profile-option">
+          <a>Get Help</a>
+        </li>
+        <li class="profile-option">
+          <a>Term and Privacy</a>
+        </li>
+        <li class="profile-option">
+          <a>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- =============== Navigation ================ -->
+<!-- <div class="dash-container">
+  <div class="navigation">
+    <ul>
+      <li>
+        <a routerLink="/dashboard/user">
+          <span class="icon">
+            <ion-icon name="apps"></ion-icon>
+          </span>
+          <span class="title">Offices</span>
+        </a>  
+      </li>
+
+      <li>
+        <a>
+          <span class="icon">
+            <ion-icon name="search"></ion-icon>
+          </span>
+          <span class="title">Search Program</span>
+        </a>
+      </li>
+
+      <li>
+        <a>
+          <span class="icon">
+            <ion-icon name="cart"></ion-icon>
+          </span>
+          <span class="title">My Application</span>
+        </a>
+      </li>
+
+      <li>
+        <a>
+          <span class="icon">
+            <ion-icon name="help-outline"></ion-icon>
+          </span>
+          <span class="title">Language Courses</span>
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/dashboard/profile">
+          <span class="icon">
+            <ion-icon name="settings-outline"></ion-icon>
+          </span>
+          <span class="title">Profile</span>
+        </a>
+      </li>
+
+      <li>
+        <a>
+          <span class="icon">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+          </span>
+          <span class="title">Messages</span>
+        </a>
+      </li>
+
+      <li>
+        <a>
+          <span class="icon">
+            <ion-icon name="log-out-outline"></ion-icon>
+          </span>
+          <span class="title">Offers</span>
+        </a>
+      </li>
+
+      <li>
+        <a>
+          <span class="icon">
+            <ion-icon name="search"></ion-icon>
+          </span>
+          <span class="title">Check Eligibility</span>
+        </a>
+      </li>
+    </ul>   
+  </div>
+</div> -->
 
 
+
+
+ <!-- ============== Adding new Navigation============ -->
+ 
+
+ <!-- ============== end of  new Navigation============ -->
+
+<router-outlet></router-outlet>
