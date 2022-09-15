@@ -1,3 +1,4 @@
+import { DashboardModule } from './dashboard/dashboard.module';
 import { LoginSystemModule } from './login-system/login-system.module';
 import { LoginComponent } from './login-system/login/login.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';

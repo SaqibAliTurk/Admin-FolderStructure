@@ -1,6 +1,49 @@
 <!-- main-container -->
+<!-- ================== Top Navigation Bar ==============> -->
+<header>
+  <img
+    class="logo"
+    style="height: fit-content; width: fit-content"
+    src="../../../assets/layout/images/logo.png"
+  />
+  <div class="nav-content">
+    <!-- notification bell -->
+    <div class="notif-container">
+      <i class="bi bi-bell icon"></i>
+    </div>
 
-<app-header></app-header>
+    <!-- profile-img -->
+    <div
+      class="profile-img-container"
+      (click)="toggleMenu()"
+      [ngClass]="{ hide: !open }"
+    >
+      <div class="profile-img">
+        <img [src]="image" alt="" />
+        <i class="bi bi-caret-down icon" width="25" height="25"></i>
+      </div>
+      <ul class="profile-options">
+        <li class="profile-option">
+          <a>Profile</a>
+        </li>
+        <li class="profile-option">
+          <a>Account Settings</a>
+        </li>
+        <li class="profile-option">
+          <a>Get Help</a>
+        </li>
+        <li class="profile-option">
+          <a>Term and Privacy</a>
+        </li>
+        <li class="profile-option">
+          <a>Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
 
 <div class="main-container">
   <aside class="side-nav">

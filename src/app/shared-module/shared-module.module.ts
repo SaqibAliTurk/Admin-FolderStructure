@@ -1,5 +1,4 @@
-// modules
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -34,6 +33,10 @@ import { CustomSelectComponent } from './custom-select/custom-select.component';
     SideNavComponent,
     PrintErrorComponent,
     CustomSelectComponent,
+    FooterComponent,
+    HeaderComponent,
+    NavbarComponent,
+    PrintErrorComponent,
   ],
 })
 export class SharedModuleModule {}

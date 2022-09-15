@@ -1,10 +1,10 @@
 // modules
+import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
+import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddNewOfficeComponent } from './add-new-office/add-new-office.component';
-
-// components
-import { HomeComponent } from './home/home.component';
 import { ManageOfficeComponent } from './manage-office/manage-office.component';
 
 const routes: Routes = [
@@ -20,6 +20,9 @@ const routes: Routes = [
         path: 'manage-office',
         component: ManageOfficeComponent,
       },
+      { path: '', redirectTo: 'user', pathMatch: 'full' },
+      { path: 'user', component: UserComponent },
+      { path: 'manageEmployees', component: ManageEmployeesComponent },
     ],
   },
 ];
